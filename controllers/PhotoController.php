@@ -2,17 +2,18 @@
 
 namespace app\controllers;
 
+use app\forms\search\PhotoSearch;
 use app\models\UploadForm;
-use app\services\UploadService;
+use app\services\PhotoService;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 
-class UploadController extends Controller
+class PhotoController extends Controller
 {
     private $service;
 
-    public function __construct($id, $module, UploadService $uploadService, $config = [])
+    public function __construct($id, $module, PhotoService $uploadService, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $uploadService;
@@ -40,7 +41,12 @@ class UploadController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new PhotoSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     public function actionUpload()
@@ -50,7 +56,7 @@ class UploadController extends Controller
         if ($photosForm->load(Yii::$app->request->post()) && $photosForm->validate()) {
             try {
                 $this->service->addPhotos($photosForm);
-                Yii::$app->session->setFlash('success', 'LOL!');
+                Yii::$app->session->setFlash('success', 'Successful');
                 return $this->redirect(['upload']);
             } catch (\DomainException $e) {
                 Yii::$app->errorHandler->logException($e);

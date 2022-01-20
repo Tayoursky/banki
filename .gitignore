@@ -34,3 +34,8 @@ tests/_support/_generated
 
 #mysql data
 docker/mysql
+
+#images
+web/uploads/*
+web/uploads/thumb/*
+!web/uploads/thumb/

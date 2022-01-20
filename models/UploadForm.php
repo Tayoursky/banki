@@ -1,7 +1,6 @@
 <?php
 namespace app\models;
 
-use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
@@ -12,10 +11,10 @@ class UploadForm extends Model
      */
     public $imageFiles;
 
-    public function rules()
+    public function rules(): array
     {
         return [
-            ['imageFiles', 'each', 'rule' => ['image']],
+            [['imageFiles'], 'image', 'maxFiles' => 5],
         ];
     }
 

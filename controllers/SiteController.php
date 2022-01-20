@@ -66,31 +66,6 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function actionUpload()
-    {
-        $photosForm = new UploadForm();
-        if ($photosForm->load(Yii::$app->request->post()) && $photosForm->validate()) {
-            try {
-                $this->service->addPhotos($photosForm);
-                Yii::$app->session->setFlash('success', 'LOL!');
-                return $this->redirect(['upload']);
-            } catch (\DomainException $e) {
-                Yii::$app->errorHandler->logException($e);
-                Yii::$app->session->setFlash('error', $e->getMessage());
-            }
-        }
-
-//        if (Yii::$app->request->isPost) {
-//            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
-//            if ($model->upload()) {
-//                // file is uploaded successfully
-//                return;
-//            }
-//        }
-
-        return $this->render('upload', ['model' => $photosForm]);
-    }
-
     /**
      * Login action.
      *
