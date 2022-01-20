@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\UploadForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,6 +10,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller
 {
@@ -19,7 +21,7 @@ class SiteController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::className(),
+                'class' => AccessControl::class,
                 'only' => ['logout'],
                 'rules' => [
                     [
@@ -30,7 +32,7 @@ class SiteController extends Controller
                 ],
             ],
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'logout' => ['post'],
                 ],
@@ -62,6 +64,31 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionUpload()
+    {
+        $photosForm = new UploadForm();
+        if ($photosForm->load(Yii::$app->request->post()) && $photosForm->validate()) {
+            try {
+                $this->service->addPhotos($photosForm);
+                Yii::$app->session->setFlash('success', 'LOL!');
+                return $this->redirect(['upload']);
+            } catch (\DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
+        }
+
+//        if (Yii::$app->request->isPost) {
+//            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+//            if ($model->upload()) {
+//                // file is uploaded successfully
+//                return;
+//            }
+//        }
+
+        return $this->render('upload', ['model' => $photosForm]);
     }
 
     /**
