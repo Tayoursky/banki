@@ -966,12 +966,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "6fc2d9995005d7fcbcc377735565ae5f074ea1ad"
+                "reference": "bfbd43b583d97be510c5264df886d1625f33118d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6fc2d9995005d7fcbcc377735565ae5f074ea1ad",
-                "reference": "6fc2d9995005d7fcbcc377735565ae5f074ea1ad",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bfbd43b583d97be510c5264df886d1625f33118d",
+                "reference": "bfbd43b583d97be510c5264df886d1625f33118d",
                 "shasum": ""
             },
             "require": {
@@ -1081,7 +1081,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-18T22:47:07+00:00"
+            "time": "2022-01-21T16:26:52+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap4",
@@ -1501,12 +1501,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "1a9fdf81d12cf77076cc0371fa638752190ad400"
+                "reference": "8a18c7454cf66414b0f15d4d00267708cd6900ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/1a9fdf81d12cf77076cc0371fa638752190ad400",
-                "reference": "1a9fdf81d12cf77076cc0371fa638752190ad400",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/8a18c7454cf66414b0f15d4d00267708cd6900ca",
+                "reference": "8a18c7454cf66414b0f15d4d00267708cd6900ca",
                 "shasum": ""
             },
             "require": {
@@ -1592,7 +1592,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-01-16T22:57:58+00:00"
+            "time": "2022-01-20T06:47:49+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -2127,12 +2127,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "a830a49bcee8f1b120397f54886076d7adee88aa"
+                "reference": "4e63216e8009625cfe5e4ffe019522b1bd36f233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/a830a49bcee8f1b120397f54886076d7adee88aa",
-                "reference": "a830a49bcee8f1b120397f54886076d7adee88aa",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/4e63216e8009625cfe5e4ffe019522b1bd36f233",
+                "reference": "4e63216e8009625cfe5e4ffe019522b1bd36f233",
                 "shasum": ""
             },
             "require": {
@@ -2185,7 +2185,7 @@
                 "issues": "https://github.com/FakerPHP/Faker/issues",
                 "source": "https://github.com/FakerPHP/Faker/tree/main"
             },
-            "time": "2022-01-19T09:49:32+00:00"
+            "time": "2022-01-23T11:10:23+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3112,12 +3112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e"
+                "reference": "6411097cf25bfab7e12dff338df2b83e10356114"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
-                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6411097cf25bfab7e12dff338df2b83e10356114",
+                "reference": "6411097cf25bfab7e12dff338df2b83e10356114",
                 "shasum": ""
             },
             "require": {
@@ -3201,7 +3201,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-15T09:00:27+00:00"
+            "time": "2022-01-23T10:13:14+00:00"
         },
         {
             "name": "psr/container",
@@ -4259,12 +4259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "6c6664efbf6fc5f22bc6cbcb03616dc7f1eb6e6f"
+                "reference": "269324791c7d907f304ea789fc6cac7746bf67b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/6c6664efbf6fc5f22bc6cbcb03616dc7f1eb6e6f",
-                "reference": "6c6664efbf6fc5f22bc6cbcb03616dc7f1eb6e6f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/269324791c7d907f304ea789fc6cac7746bf67b5",
+                "reference": "269324791c7d907f304ea789fc6cac7746bf67b5",
                 "shasum": ""
             },
             "require": {
@@ -4351,7 +4351,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-12T18:55:10+00:00"
+            "time": "2022-01-22T06:53:01+00:00"
         },
         {
             "name": "symfony/css-selector",
