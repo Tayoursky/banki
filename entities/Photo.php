@@ -10,7 +10,6 @@ use yii\web\UploadedFile;
  * @property integer $id
  * @property string $name
  * @property integer $created_at
- * @property $imageFiles
  *
  */
 

@@ -20,14 +20,4 @@ class PhotoRepository
             throw new \RuntimeException('Saving error.');
         }
     }
-
-    /**
-     * @throws \yii\db\StaleObjectException
-     */
-    public function remove(Photo $photo): void
-    {
-        if(!$photo->delete()){
-            throw new \RuntimeException('Removing error.');
-        }
-    }
 }

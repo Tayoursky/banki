@@ -3,9 +3,8 @@
 namespace app\services;
 
 use app\entities\Photo;
-use app\models\UploadForm;
+use app\forms\UploadForm;
 use app\repositories\PhotoRepository;
-use Yii;
 use yii\imagine\Image;
 
 class PhotoService
@@ -34,12 +33,4 @@ class PhotoService
 
         }
     }
-
-    public function removePhoto($id): void
-    {
-        $photo = $this->repository->get($id);
-        $photo->removePhoto($id);
-        $this->repository->save($photo);
-    }
-
 }

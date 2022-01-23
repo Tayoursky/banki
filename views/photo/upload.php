@@ -1,7 +1,8 @@
 <?php
 /** @var yii\web\View $this */
-/** @var app\models\UploadForm $model */
+/** @var app\forms\UploadForm $model */
 
+use kartik\file\FileInput;
 use yii\widgets\ActiveForm;
 ?>
 
@@ -12,8 +13,16 @@ use yii\widgets\ActiveForm;
     ],
 ]) ?>
 
-<?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
-
-    <button>Submit</button>
+<?= $form->field($model, 'imageFiles[]')
+    ->label(false)
+    ->widget(FileInput::class, [
+    'options' => [
+        'accept' => 'image/*',
+        'multiple' => true,
+    ],
+    'pluginOptions' => [
+        'maxFileCount' => 5,
+    ]
+]) ?>
 
 <?php ActiveForm::end() ?>
